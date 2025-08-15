@@ -57,6 +57,33 @@ The Use Case Diagram illustrates how different actors interact with the system t
 - User & Space Management  
 - Entry/Exit Verification  
 
-> 📌 This diagram provides a high-level overview of role-based access and system behavior.
+## 📌 Problem Statement: AI-Driven Campus Vehicle Parking System
 
-![Use Case Diagram](images/use_case_diagram.png)
+### 🎯 Objective  
+To design and document a **Data Flow Diagram (DFD)** for an AI-powered campus parking system that automates vehicle entry, slot allocation, and exit processes. The DFD will visualize how data moves through the system, enabling efficient analysis, development, and optimization.
+
+### 🏫 Project Context  
+The Campus Parking Automation System leverages AI and sensor-based technologies to streamline parking operations within a university or institutional campus. It aims to eliminate manual intervention, reduce congestion, and enhance user experience for students, faculty, and visitors.
+
+### ⚙️ System Features  
+- User registration and authentication  
+- Real-time parking slot availability tracking  
+- Automated gate control using AI and sensors  
+- Slot booking and cancellation  
+- Admin dashboard for monitoring and reporting
+
+### 🚧 Key Challenges  
+- Handling multiple user roles with distinct privileges  
+- Ensuring accurate, real-time updates of parking data  
+- Integrating hardware (e.g., sensors, cameras) with software logic  
+- Maintaining data consistency across modules  
+- Generating actionable insights for campus authorities
+
+### 🗂️ Scope of DFD Documentation  
+| DFD Level | Description |
+|-----------|-------------|
+| **Level 0** | Context diagram showing external entities (Users, Admin, Sensors) and system boundaries |
+| **Level 1** | Breakdown of core processes: Login/Signup, Slot Booking, Availability Monitoring, Admin Control |
+| **Level 2** | Detailed sub-processes: AI-based slot allocation, sensor data processing, report generation |
+
+
