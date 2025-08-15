@@ -57,13 +57,7 @@ The Use Case Diagram illustrates how different actors interact with the system t
 - User & Space Management  
 - Entry/Exit Verification  
 
-## 📌 Problem Statement: AI-Driven Campus Vehicle Parking System
 
-### 🎯 Objective  
-To design and document a **Data Flow Diagram (DFD)** for an AI-powered campus parking system that automates vehicle entry, slot allocation, and exit processes. The DFD will visualize how data moves through the system, enabling efficient analysis, development, and optimization.
-
-### 🏫 Project Context  
-The Campus Parking Automation System leverages AI and sensor-based technologies to streamline parking operations within a university or institutional campus. It aims to eliminate manual intervention, reduce congestion, and enhance user experience for students, faculty, and visitors.
 
 ### ⚙️ System Features  
 - User registration and authentication  
@@ -86,4 +80,6 @@ The Campus Parking Automation System leverages AI and sensor-based technologies 
 | **Level 1** | Breakdown of core processes: Login/Signup, Slot Booking, Availability Monitoring, Admin Control |
 | **Level 2** | Detailed sub-processes: AI-based slot allocation, sensor data processing, report generation |
 
+ 
+The DFDs serve as a blueprint for understanding the internal workings of the Campus Parking Automation System. They help developers, stakeholders, and contributors visualize system behavior, identify data dependencies, and support future enhancements with clarity and precision.
 
