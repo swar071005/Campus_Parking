@@ -32,7 +32,7 @@ A responsive web interface showcasing an automated vehicle parking service. Incl
 
 
 ```bash
-git clone https://github.com/yourusername/auto-parking-system.git
+
 
 ## 📊 Use Case Diagram – Campus Parking System
 
