@@ -34,6 +34,7 @@ A responsive web interface showcasing an automated vehicle parking service. Incl
 ```bash
 
 
+
 ## 📊 Use Case Diagram – Campus Parking System
 
 The Use Case Diagram illustrates how different actors interact with the system to perform key parking operations.
@@ -82,4 +83,3 @@ The Use Case Diagram illustrates how different actors interact with the system t
 
  
 The DFDs serve as a blueprint for understanding the internal workings of the Campus Parking Automation System. They help developers, stakeholders, and contributors visualize system behavior, identify data dependencies, and support future enhancements with clarity and precision.
-
