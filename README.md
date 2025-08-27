@@ -83,3 +83,29 @@ The Use Case Diagram illustrates how different actors interact with the system t
 
  
 The DFDs serve as a blueprint for understanding the internal workings of the Campus Parking Automation System. They help developers, stakeholders, and contributors visualize system behavior, identify data dependencies, and support future enhancements with clarity and precision.
+
+Got it, Swar! Here's the exact section you can add to your **README.md** file to showcase the **Activity Diagram** and **Swimlane Diagram** for your Campus Parking Automation System:
+
+---
+
+## 🧩 UML Diagrams
+
+### 🔄 Activity Diagram
+The activity diagram illustrates the end-to-end flow of the parking system—from user login and slot booking to gate access and vehicle parking. It captures decision points like booking verification and highlights system interactions across roles.
+
+**Key Activities**:
+- User Login/Register  
+- Check Slot Availability  
+- Book Parking Slot  
+- Receive Confirmation  
+- Arrive at Campus  
+- Gate Access & Parking
+
+### 🧍 Swimlane Diagram
+The swimlane diagram breaks down the responsibilities across four roles:
+- **Student/User**: Initiates booking and arrives at campus  
+- **System**: Handles backend logic and slot management  
+- **Admin**: Manages slot database and generates reports  
+- **Security Staff**: Verifies booking and controls gate access
+
+
