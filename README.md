@@ -84,9 +84,7 @@ The Use Case Diagram illustrates how different actors interact with the system t
  
 The DFDs serve as a blueprint for understanding the internal workings of the Campus Parking Automation System. They help developers, stakeholders, and contributors visualize system behavior, identify data dependencies, and support future enhancements with clarity and precision.
 
-Got it, Swar! Here's the exact section you can add to your **README.md** file to showcase the **Activity Diagram** and **Swimlane Diagram** for your Campus Parking Automation System:
 
----
 
 ## 🧩 UML Diagrams
 
