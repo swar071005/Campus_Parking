@@ -3,6 +3,8 @@ My project for automatic vehicle parking system in campus.
 
 Zip file about my project: 
 [parkingwebsite.zip](https://github.com/user-attachments/files/21522311/parkingwebsite.zip)
+Aa
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 🚘 Automatic Vehicle Parking System
 
@@ -33,7 +35,7 @@ A responsive web interface showcasing an automated vehicle parking service. Incl
 
 ```bash
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 📊 Use Case Diagram – Campus Parking System
 
@@ -84,7 +86,7 @@ The Use Case Diagram illustrates how different actors interact with the system t
  
 The DFDs serve as a blueprint for understanding the internal workings of the Campus Parking Automation System. They help developers, stakeholders, and contributors visualize system behavior, identify data dependencies, and support future enhancements with clarity and precision.
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🧩 UML Diagrams
 
@@ -106,30 +108,22 @@ The swimlane diagram breaks down the responsibilities across four roles:
 - **Admin**: Manages slot database and generates reports  
 - **Security Staff**: Verifies booking and controls gate access
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ###📊 Project Cost Estimation (COCOMO Model)
 
 We estimated the development effort, schedule, and cost of this project using the COCOMO software cost estimation model, based on ~28,000 lines of code (28 KLOC).
 
 1️⃣ Basic COCOMO Model (Semi-Detached)
-
 Effort (E): 125.30 Person-Months
-
 Development Time (T): 13.56 Months
-
 Average Staffing (P): 9 Developers
-
 Estimated Cost: $626,481.50
 
 2️⃣ Intermediate COCOMO Model (with Cost Drivers)
-
 Adjusted Effort (E): 144.10 Person-Months
-
 Development Time (T): 14.47 Months
-
 Average Staffing (P): 10 Developers
-
 Estimated Cost: $720,500.00
 
 3️⃣ Detailed COCOMO Model (Phase-Wise Effort)
@@ -143,9 +137,20 @@ Total	100%	144.10
 📈 Insights
 
 The project requires ~125–144 person-months of effort.
-
 A realistic development timeline is 13–15 months.
-
 Average team size is 9–10 developers.
-
 Estimated project budget: $626K – $720K.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+###📊 RMMM Plan (Risk Mitigation, Monitoring, and Management)
+
+To ensure reliable project delivery, a structured RMMM strategy has been applied.
+
+| Risk ID | Description                          | Likelihood | Impact | Mitigation Plan                               | Monitoring Strategy                  | Contingency Plan                               | Status  |
+| ------- | ------------------------------------ | ---------- | ------ | --------------------------------------------- | ------------------------------------ | ---------------------------------------------- | ------- |
+| R1      | Sensor Integration Failure           | Medium     | High   | Modular API, start with mock testing          | Weekly integration testing & logs    | Revert to manual entry mode                    | Open    |
+| R2      | Peak-time Server Slowdown            | High       | Medium | DB optimization, caching, load balancing      | Monitor response times & stress test | Scale server resources, add caching layer      | Open    |
+| R3      | Security Vulnerability / Data Breach | Medium     | High   | HTTPS, input validation, RBAC, encryption     | Monthly security scans & log reviews | Patch immediately, rotate credentials, notify  | Open    |
+| R4      | Scope Creep (Feature Expansion)      | Medium     | Medium | Freeze scope post-MVP, backlog prioritization | Bi-weekly scope review meetings      | Postpone non-critical features to next release | Open    |
+| R5      | Network Outage at Campus             | Low        | Medium | Offline fallback mode, local caching          | Monitor connectivity uptime          | Switch to offline mode, notify users           | Planned |
+
