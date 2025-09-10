@@ -107,3 +107,45 @@ The swimlane diagram breaks down the responsibilities across four roles:
 - **Security Staff**: Verifies booking and controls gate access
 
 
+
+###📊 Project Cost Estimation (COCOMO Model)
+
+We estimated the development effort, schedule, and cost of this project using the COCOMO software cost estimation model, based on ~28,000 lines of code (28 KLOC).
+
+1️⃣ Basic COCOMO Model (Semi-Detached)
+
+Effort (E): 125.30 Person-Months
+
+Development Time (T): 13.56 Months
+
+Average Staffing (P): 9 Developers
+
+Estimated Cost: $626,481.50
+
+2️⃣ Intermediate COCOMO Model (with Cost Drivers)
+
+Adjusted Effort (E): 144.10 Person-Months
+
+Development Time (T): 14.47 Months
+
+Average Staffing (P): 10 Developers
+
+Estimated Cost: $720,500.00
+
+3️⃣ Detailed COCOMO Model (Phase-Wise Effort)
+Phase	% Effort	Effort (PM)
+Planning & Requirements	6%	8.65
+System Design	16%	23.06
+Detailed Design	26%	37.47
+Coding & Unit Testing	42%	60.12
+Integration & Testing	10%	14.41
+Total	100%	144.10
+📈 Insights
+
+The project requires ~125–144 person-months of effort.
+
+A realistic development timeline is 13–15 months.
+
+Average team size is 9–10 developers.
+
+Estimated project budget: $626K – $720K.
