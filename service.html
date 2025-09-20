@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="styles.css" rel="stylesheet" />
-     <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services - College Parking System</title>
+<link href="style.css" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <!-- Services Section -->
-<section id="services" class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-3xl font-extrabold mb-6">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div>
-        <img
-          src="Real-time Parking Availability.png"
-          alt="Real-time Availability"
-          class="mx-auto rounded-lg shadow-lg mb-4"
-        />
-        <h3 class="text-2xl font-semibold mb-2">Real-time Parking Availability</h3>
-        <p class="text-gray-700">Check available parking spaces instantly through our mobile app or web portal.</p>
-      </div>
-      <div>
-        <img
-          src="Automated Entry & Exit.jpg"
-          alt="Automated Entry & Exit"
-          class="mx-auto rounded-lg shadow-lg mb-4"
-        />
-        <h3 class="text-2xl font-semibold mb-2">Automated Entry & Exit</h3>
-        <p class="text-gray-700">Effortless entry and exit with automated ticketing and access control.</p>
-      </div>
-      <div>
-        <img
-          src="Online Parking Reservations.jpg"
-          alt="Online Parking Reservations"
-          class="mx-auto rounded-lg shadow-lg mb-4"
-        />
-        <h3 class="text-2xl font-semibold mb-2">Online Parking Reservations</h3>
-        <p class="text-gray-700">Reserve your parking spot in advance for guaranteed availability on busy days.</p>
-      </div>
-    </div>
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white max-w-7xl mx-auto">
+  <h1 class="text-4xl font-extrabold text-center mb-12">Our Services</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12" id="service-list">
+    <!-- Service items loaded dynamically here -->
+  </div>
+
+  <div class="max-w-md mx-auto">
+    <h2 class="text-2xl font-semibold mb-6">Book a Parking Slot</h2>
+    <form id="booking-form" class="space-y-4">
+      <input 
+        type="text" 
+        name="user_id" 
+        placeholder="User ID" 
+        required 
+        class="w-full border border-gray-300 rounded px-4 py-2" />
+      <input 
+        type="text" 
+        name="slot_id" 
+        placeholder="Slot ID" 
+        required 
+        class="w-full border border-gray-300 rounded px-4 py-2" />
+      <button 
+        type="submit" 
+        class="w-full bg-yellow-500 text-white font-semibold py-2 rounded hover:bg-yellow-600 transition">
+        Book Slot
+      </button>
+    </form>
   </div>
 </section>
+
+<script>
+  // Load services dynamically from backend API
+  fetch('/api/services')
+    .then(res => res.json())
+    .then(data => {
+      const listDiv = document.getElementById('service-list');
+      data.forEach(s => {
+        const div = document.createElement('div');
+        div.className = 'p-6 bg-gray-100 rounded shadow';
+        div.innerHTML = `
+          <h3 class="text-xl font-bold mb-2">${s.name}</h3>
+          <p>${s.description}</p>
+        `;
+        listDiv.appendChild(div);
+      });
+    });
+
+  // Handle booking form submission and call backend
+  document.getElementById('booking-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const user_id = e.target.user_id.value;
+    const slot_id = e.target.slot_id.value;
+
+    fetch('/api/book_slot', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({user_id, slot_id})
+    })
+    .then(res => res.json())
+    .then(data => alert(data.message))
+    .catch(() => alert('Booking failed, please try again later.'));
+  });
+</script>
 
 </body>
 </html>
