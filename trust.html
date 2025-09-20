@@ -8,7 +8,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans text-gray-900">
-
   <!-- Header -->
   <header class="backdrop-blur bg-white bg-opacity-80 fixed top-0 left-0 right-0 shadow-sm z-30">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -43,12 +42,10 @@
         <h3 class="text-xl font-bold text-yellow-500 mb-2">🔒 Secure & Reliable</h3>
         <p>99.9% system uptime with strong security measures to protect your data and ensure smooth operation.</p>
       </div>
-
       <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <h3 class="text-xl font-bold text-yellow-500 mb-2">🌍 Trusted by 1000+ Users</h3>
         <p>Institutions, students, and staff rely on us daily for stress-free campus parking management.</p>
       </div>
-
       <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <h3 class="text-xl font-bold text-yellow-500 mb-2">📞 24/7 Support</h3>
         <p>Our dedicated support team is always available to help you whenever you need assistance.</p>
@@ -63,7 +60,25 @@
         and peace of mind for everyone on campus.
       </p>
     </div>
+
+    <!-- Dynamic Testimonials -->
+    <div id="testimonials" class="max-w-3xl mx-auto mt-12 text-left bg-white rounded-lg p-6 shadow-md">
+      <h3 class="text-2xl font-bold mb-4">What Our Users Say</h3>
+    </div>
   </section>
 
+  <script>
+    fetch('/api/testimonials')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('testimonials');
+        data.forEach(t => {
+          const p = document.createElement('p');
+          p.textContent = `"${t.message}" - ${t.author}`;
+          p.className = 'mb-4 italic text-gray-700';
+          container.appendChild(p);
+        });
+      });
+  </script>
 </body>
 </html>
