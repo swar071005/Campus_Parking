@@ -35,7 +35,6 @@ A responsive web interface showcasing an automated vehicle parking service. Incl
 
 ```bash
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 📊 Use Case Diagram – Campus Parking System
 
@@ -141,7 +140,8 @@ A realistic development timeline is 13–15 months.
 Average team size is 9–10 developers.
 Estimated project budget: $626K – $720K.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ###📊 RMMM Plan (Risk Mitigation, Monitoring, and Management)
 
 To ensure reliable project delivery, a structured RMMM strategy has been applied.
@@ -170,12 +170,41 @@ To ensure reliable project delivery, a structured RMMM strategy has been applied
 | 2             | R2      | Peak-time Server Slowdown            | High × Medium → Critical     |
 | 3             | R3      | Security Vulnerability / Data Breach | Medium × High → Critical     |
 
-3️⃣ Risk Information Sheet (RIS) – Top 3 Priority Risks
-| Risk ID | Category         | Likelihood | Impact | Triggers                           | Mitigation Strategy                                    | Monitoring Strategy                          | Contingency Plan                                    | Status |
-| ------- | ---------------- | ---------- | ------ | ---------------------------------- | ------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------- | ------ |
-| R1      | Technical Risk   | Medium     | High   | Sensor errors, API failures        | Modular API, test with mock data                       | Weekly integration testing, error logs       | Switch to manual entry system temporarily           | Open   |
-| R2      | Performance Risk | High       | Medium | Peak-hour traffic load             | Optimize DB queries, caching, enable load balancing    | Response-time monitoring, weekly stress test | Scale server resources, add caching layer           | Open   |
-| R3      | Security Risk    | Medium     | High   | Unauthorized access, SQL injection | HTTPS, encryption, input validation, role-based access | Monthly vulnerability scans, log reviews     | Patch immediately, rotate credentials, notify users | Open   |
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+###📊Task Set Identification
+
+| Phase                | Task Set                          | Description                                       | Predecessor Tasks / Dependencies            |
+|--------------------- |-----------------------------------|---------------------------------------------------|---------------------------------------------|
+| Requirement Analysis | - Define project scope            | Defining project boundaries and goals             | None                                        |
+|                      | - Collect requirements            | Gathering functional and non-functional needs     | None                                        |
+|----------------------| - Identify user roles             | Specifying the stakeholders and user roles        | None                                        |
+| System Design        |  - Design architecture            | High-level system design                          | Requirement Analysis completed              |
+|                      |  - Create DFD & UML diagrams      | Data and process modeling                         | Requirement Analysis completed              |
+|----------------------|  - Plan DB & UI                   | Database schema and user interface planning       | Requirement Analysis completed              |
+| Frontend Development | - Build HTML/CSS pages            | Coding UI screens                                 | System Design completed                     |
+|                      | - Implement slot UI               | Implement interactive parking slot features       | Frontend Development: Build HTML/CSS pages  |
+|----------------------| - Integrate with backend          | Connect frontend with backend APIs                | Frontend UI implemented                     |
+| Backend Development  | - Develop auth & booking          | Build authentication and booking system           | System Design completed                     |
+|                      | - Create APIs                     | Backend API development                           | Backend Development: Auth & Booking         |
+|----------------------| - Add logging & security          | Add logs and security layers                      | Backend API setup                           |
+| Hardware Integration | - Handle sensor data              | Process sensor input                              | Backend APIs available                      |
+|                      | - Develop gate control APIs       | Develop APIs for gate automation                  | Sensor data handled                         |
+|----------------------| - Test integration                | Test hardware-software interaction                | Gate control APIs ready                     |
+| Database & Server    | - Implement schema                | Create database structure                         | System Design completed                     |
+|         Setup        | - Configure server                | Setup server environment                          | Database schema ready                       |
+|----------------------| - Set up caching/load balancing   | Optimize server performance                       | Server configuration complete               |
+| Testing              | - Unit testing                    | Test individual modules                           | Development done                            |
+|                      | - Integration testing             | Test combined modules                             | Unit testing complete                       |
+|----------------------| - Performance & security testing  | Ensure reliability and safety                     | Integration testing complete                |
+| Deployment           | - Host on cloud/server            | Deploy system                                     |Testing complete                             |
+|                      | - Set up monitoring               | Setup logging and alerting                        | Deployment done                             |
+|----------------------| - Ensure scalability              | Confirm system scales                             | Monitoring live                             |
+| Maintenance          | - Fix bugs                        | Address issues                                    | Deployment live                             |
+|                      | - Add payment gateway             | Implement payment system                          | Deployment live                             |
+|----------------------| - Implement AI slot allocation    | Add AI-driven slot management                     | Deployment live                             |
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
